@@ -22,7 +22,6 @@ export default {
   align-items: center;
   padding: 5px 10%;
   width: -webkit-fill-available;
-  background-color: rgba(217, 217, 217, 0.5);
 }
 @media screen and (max-width: 900px) {
   .nav_mobile{

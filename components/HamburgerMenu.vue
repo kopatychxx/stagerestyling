@@ -17,6 +17,7 @@
       <a href="#">Service</a>
       <a href="#">Portfolio</a>
       <a href="#">Contact</a>
+
     </div>
   </div>
 </template>
@@ -60,7 +61,7 @@ export default {
   display: block;
   height: 3px;
   width: 30px;
-  background-color: black;
+  background-color: #9f0000;
   border-radius: 5px;
   transition: all 0.3s ease;
 }

@@ -12,6 +12,9 @@
 </template>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 .main{
   font-family: 'Quicksand', sans-serif;
   background-color: #F7F7F7;

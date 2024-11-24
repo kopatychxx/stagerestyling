@@ -4,19 +4,25 @@
 <template>
   <div class="header">
     <div class="logo_stage_Restyling"><img src="../static/logo_stage_restyling.png" alt="logo_stage_Restyling"></div>
-    <div class="nav">
-      <a href="/stageRestyling/pages">Home</a>
-      <a href="/">About us</a>
-      <a href="">Service</a>
-      <a href="">Portfolio</a>
-      <a href="">Contact</a>
-    </div>
+      <ul class="nav">
+        <li class="nav_button" @click="scrollToSection('home')">Home</li>
+        <li class="nav_button" @click="scrollToSection('about')">About us</li>
+        <li class="nav_button">Service</li>
+        <li class="nav_button">Portfolio</li>
+        <li class="nav_button">Contact</li>
+      </ul>
   </div>
 </template>
 
 <script>
+import VueScrollTo from 'vue-scrollto'
 export default {
-  name: "AppNavbar"
+  name: "AppNavbar",
+    methods: {
+      scrollToSection() {
+        VueScrollTo.scrollTo('#about', 900)  // Прокрутка к элементу с id="about" за 800 мс
+      },
+    }
 }
 </script>
 
@@ -37,17 +43,20 @@ export default {
   background-color: rgba(217, 217, 217, 0.2);
   padding: 14px 20px;
   border-radius: 20px;
+  list-style: none;
 }
-.nav a {
-  margin-right: 38px;
+.nav ul li {
   text-decoration: none;
   color: white;
   font-family: 'Quicksand', sans-serif;
 }
-.nav a li:last-child {
+.nav_button {
+  margin-right: 20px;
+}
+.nav ul li:last-child {
   margin: 0;
 }
-a {
+li {
   position: relative;
   color: WHITE;
   cursor: pointer;
@@ -55,7 +64,7 @@ a {
   text-decoration: none;
 
 }
-a:after {
+li:after {
   display: block;
   position: absolute;
   left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
@@ -65,8 +74,8 @@ a:after {
   content: "";
   transition: width 0.5s ease-out; /*задаём время анимации*/
 }
-a:hover:after,
-a:focus:after {
+li:hover:after,
+li:focus:after {
   width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
 @media screen and (max-width: 900px) {
