@@ -78,6 +78,10 @@ export default {
 @media screen and (max-width: 900px) {
   .landing_page{
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   .mainText_header{
     font-size: 40px;
