@@ -60,7 +60,7 @@ export default {
   display: block;
   height: 3px;
   width: 30px;
-  background-color: white;
+  background-color: black;
   border-radius: 5px;
   transition: all 0.3s ease;
 }

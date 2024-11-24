@@ -62,6 +62,9 @@ export default {
     flex-direction: column-reverse;
     align-items: start;
   }
+  .aboutus_info_header {
+    font-size: 30px;
+  }
   .aboutus_info {
     display: flex;
     margin: 0 auto 50px;
@@ -70,6 +73,7 @@ export default {
   }
   .aboutus_info_text {
     text-align: center;
+    font-size: 20px;
   }
   .aboutus_img {
     width: 70%;
