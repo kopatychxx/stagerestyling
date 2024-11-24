@@ -90,6 +90,10 @@ export default {
   .mainText{
     justify-items: center;
   }
+  .button {
+    display: flex;
+    margin: 35px auto;
+  }
 }
 @media screen and (max-width:600px) {
 
