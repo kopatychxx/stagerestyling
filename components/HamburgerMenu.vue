@@ -1,4 +1,4 @@
-<script setup>
+<script setup xmlns:active="http://www.w3.org/1999/xhtml">
 
 </script>
 
@@ -12,11 +12,11 @@
       </div>
     </div>
     <div class="menu" :class="{ active: isActive }">
-      <a href="#">Home</a>
-      <a href="#">About us</a>
-      <a href="#">Service</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Contact</a>
+      <a href="#" @click="toggleMenu" @click.prevent="scrollToSection('home')">Home</a>
+      <a href="#" @click="toggleMenu" @click.prevent="scrollToSection('about')">About us</a>
+      <a href="#" @click="toggleMenu" @click.prevent="scrollToSection('service')">Service</a>
+      <a href="#" @click="toggleMenu" @click.prevent="scrollToSection('portfolio')">Portfolio</a>
+      <a href="#" @click="toggleMenu" @click.prevent="scrollToSection('contact')">Contact</a>
 
     </div>
   </div>
@@ -34,6 +34,12 @@ export default {
     toggleMenu() {
       this.isActive = !this.isActive;
     },
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        this.$scrollTo(element, { offset: -50, duration: 1000 });
+      }
+    }
   },
 };
 </script>
