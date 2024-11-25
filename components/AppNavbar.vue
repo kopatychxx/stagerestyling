@@ -5,24 +5,28 @@
   <div class="header">
     <div class="logo_stage_Restyling"><img src="../static/logo_stage_restyling.png" alt="logo_stage_Restyling"></div>
       <ul class="nav">
-        <li class="nav_button" @click="scrollToSection('home')">Home</li>
-        <li class="nav_button" @click="scrollToSection('about')">About us</li>
-        <li class="nav_button">Service</li>
-        <li class="nav_button">Portfolio</li>
-        <li class="nav_button">Contact</li>
+        <li class="nav_button" @click.prevent="scrollToSection('home')">Home</li>
+        <li class="nav_button" @click.prevent="scrollToSection('about')">About us</li>
+        <li class="nav_button" @click.prevent="scrollToSection('service')">Service</li>
+        <li class="nav_button" @click.prevent="scrollToSection('portfolio')">Portfolio</li>
+        <li class="nav_button" @click.prevent="scrollToSection('contact')">Contact</li>
       </ul>
   </div>
 </template>
 
 <script>
-import VueScrollTo from 'vue-scrollto'
+
 export default {
   name: "AppNavbar",
-    methods: {
-      scrollToSection() {
-        VueScrollTo.scrollTo('#about', 900)  // Прокрутка к элементу с id="about" за 800 мс
-      },
+  methods: {
+    // Определяем метод scrollToSection
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        this.$scrollTo(element, { offset: -50, duration: 1000 });
+      }
     }
+  }
 }
 </script>
 

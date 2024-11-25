@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="aboutus" id="about" >
+  <div id="about" class="aboutus" >
     <img class="aboutus_img" src="../static/abuoutus.png" alt="">
     <div class="aboutus_info">
       <h3 class="aboutus_info_header">About us</h3>

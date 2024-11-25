@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="landing_page" id="home">
+    <div id="home" class="landing_page">
       <div class="mainText">
         <h1 class="mainText_header">Choose your stage,<br>define your <span class="header_highlight">style!</span></h1>
         <a href="" class="button"><p>Ask for a price</p>
